@@ -1,0 +1,32 @@
+pre {
+  display: inline;
+  background: transparent;
+  border: none;
+  font-size: 15px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+.data-cadastro {
+  margin: 0 0 10px;
+}
+.page-header {
+  margin: 0px 0 20px;
+}
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+.input-fonte {
+  margin: 0px 0 10px;
+}
+button {
+  margin: 20px 0 0 15px;
+}
+.custom-btn {
+  background-color: #ee042c!important;
+  color: #fff!important;
+}
+.mat-dialog-actions {
+  margin-bottom: 0px;
+}
+

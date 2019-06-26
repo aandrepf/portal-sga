@@ -1,0 +1,10 @@
+<button class="btn btn-default" (click)="createConsulta()" *ngIf="showButton">SALVAR</button>
+<div class="table-responsive">
+  <table class="table">
+    <tr *ngFor="let row of newElement">
+      <td *ngFor="let val of row">
+        {{ val }}
+      </td>
+    </tr>
+  </table>
+</div>

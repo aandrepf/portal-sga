@@ -1,0 +1,19 @@
+<div class="col-md-6 col-lg-6 col-xs-12 download-xlsx-wpr">
+  <p class="download-xlsx-text">Baixe a planilha modelo para cadastrar os dias de feriados ou picos, que serão populadas para as agências.</p>
+  <!--section class="press"><button>button</button></section--->
+  <section class="press">
+    <p class="download-xls-body" (click)="download(sheetName)">
+      <img src="./assets/images/icon-excel.png" alt="download XLS File" class="img-download-xls">&nbsp;{{ sheetName }}
+    </p>
+  </section>
+
+</div>
+<div class="col-md-6 col-lg-6 col-xs-12 import-xlsx-wpr">
+  <p class="download-xlsx-text">Abaixo você pode fazer o upload da planilha de feriados e salvar as informações na base de dados do calendário.</p>
+
+  <div class="input-file-container">
+    <input #selectFile class="input-file" id="my-file" type="file" (change)="onFileChange($event)" multiple="false">
+    <label tabindex="0" for="my-file" class="input-file-trigger"><i class="fa fa-upload" aria-hidden="true"></i> Selecione um arquivo</label>
+  </div>
+  <p class="file-return" (click)="reset()" [style.display]="display" matTooltip="Clique na lixeira para limpar a seleção">{{ fileName }}</p>
+</div>

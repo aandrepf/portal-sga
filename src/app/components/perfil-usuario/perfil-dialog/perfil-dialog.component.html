@@ -1,0 +1,27 @@
+<div class="col-lg-12">
+  <div class="page-header">
+    <h3>{{ data.tituloDialog }}</h3>
+  </div>
+
+  <form [formGroup]="perfilGroup" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <input matInput placeholder="Perfil de Usuário" formControlName="descr">
+      <mat-error>Campo Obrigatório</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-select placeholder="Nivel de Unidade" formControlName="nivel_unidade">
+        <mat-option><strong>Selecione o nivel abaixo ---</strong></mat-option>
+        <mat-option
+          *ngFor="let nivel of nu"
+          [(value)]="nivel.nivel_unidade">{{ nivel.descr }}</mat-option>
+      </mat-select>
+      <mat-error>Campo Obrigatório</mat-error>
+    </mat-form-field>
+
+    <mat-dialog-actions class="mat-dialog-footer" align="end">
+      <button mat-raised-button matDialogClose>FECHAR</button>
+      <button mat-raised-button class="custom-btn" [disabled]="perfilGroup.invalid">{{ data.btnCustom }}</button>
+    </mat-dialog-actions>
+  </form>
+</div>

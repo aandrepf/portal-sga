@@ -1,0 +1,60 @@
+<div class="col-lg-12">
+  <div class="page-header">
+    <h3>{{ data.tituloDialog }}</h3>
+    <!--small>{{ feriadoGroup.value | json }}</small-->
+  </div>
+
+  <div class="data-cadastro">
+    Data do Cadastro: <pre>{{ dataArray[0] }}/{{ dataArray[1] }}</pre><br>
+    <span *ngIf="data.classe !== 0">Classe do Feriado: <pre>{{ nomeFeriado }}</pre></span>
+  </div>
+
+  <form [formGroup]="feriadoGroup" (ngSubmit)="onSubmit()">
+
+    <mat-form-field *ngIf="data.classe === 0">
+      <mat-select placeholder="Classificação do Feriado" formControlName="idClasseFeriado">
+        <mat-option disabled><strong>Selecione abaixo o tipo de classe</strong></mat-option>
+        <mat-option value="1">FERIADO</mat-option>
+        <mat-option value="2">DIA DE PICO</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-select placeholder="Abrangência do Feriado/Horário de Pico" formControlName="idTipoFeriado">
+        <mat-option disabled><strong>Selecione abaixo o tipo de abrangência</strong></mat-option>
+        <mat-option *ngFor="let item of tipo" [value]="item.idTipoferiado">{{ item.descricao }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field *ngIf="feriadoGroup.value.idTipoFeriado === 2 || feriadoGroup.value.idTipoFeriado === 3">
+      <mat-select placeholder="Estado" formControlName="idEstado">
+        <mat-option disabled><strong>Selecione abaixo o estado</strong></mat-option>
+        <mat-option *ngFor="let item of estado" [value]="item.idEstado" (click)="getMunicipio(item.idEstado)">{{ item.nome }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field *ngIf="feriadoGroup.value.idTipoFeriado === 3 && feriadoGroup.value.idEstado !== ''">
+      <mat-select placeholder="Municipio" formControlName="idCodMunic">
+        <mat-option disabled><strong>Selecione abaixo o municipio</strong></mat-option>
+        <mat-option *ngFor="let item of municipio" [value]="item.idCodmunic">{{ item.municipio }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Descrição do Feriado/Horário de Pico" formControlName="descricao">
+      <mat-error>Campo Obrigatório</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="input-fonte">
+      <input matInput type="number" placeholder="Meta de Atendimento (min)" formControlName="meta" min="1" required>
+      <mat-hint><strong>Tempo Mínimo de Atendimento: 1min</strong></mat-hint>
+      <mat-error>Tempo Mínimo de Atendimento: 1min</mat-error>
+    </mat-form-field>
+
+    <mat-dialog-actions class="mat-dialog-footer" align="end">
+      <button mat-raised-button matDialogClose>FECHAR</button>
+      <button mat-raised-button class="custom-btn" [disabled]="feriadoGroup.invalid">{{ data.btnCustom }}</button>
+    </mat-dialog-actions>
+  </form>
+
+</div>

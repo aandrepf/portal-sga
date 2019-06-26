@@ -1,0 +1,148 @@
+/* in-flight clone */
+.gu-mirror {
+  position: fixed !important;
+  margin: 0 !important;
+  z-index: 9999 !important;
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+  pointer-events: none;
+}
+/* high-performance display:none; helper */
+.gu-hide {
+  left: -9999px !important;
+}
+/* added to mirrorContainer (default = body) while dragging */
+.gu-unselectable {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+/* added to the source element while its mirror is dragged */
+.gu-transit {
+  opacity: 0.2;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  filter: alpha(opacity=20);
+}
+
+/*
+ * this helps the mirrored elements be the right size
+ * and it's generally a good practice
+ */
+ * {
+  box-sizing: border-box;
+}
+
+h4 {
+  text-align: center;
+  font-size: 18px;
+  margin: 0 0 20px;
+  color: #666;
+  pointer-events: none;
+}
+
+.dragdroptitle {
+  font-size: 15px;
+  margin: 20px 0 10px !important;
+  width: auto;
+  float: left;
+}
+
+code {
+  background-color: #ecf0f1;
+  border-radius: 2px;
+  color: #2980b9;
+  font-size: 87.5%;
+  padding: .2rem .4rem;
+  word-break: break-word;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: Roboto,"Helvetica Neue",sans-serif;
+}
+
+.flex {
+  display: flex;
+  padding: 8px 0;
+  background: rgba(255, 255, 255, 0.4);
+  width: 100%;
+}
+
+.container {
+  flex: 1;
+  padding: 0;
+}
+.container:not(:last-child) {
+  margin-right: 0px;
+}
+.container div {
+  cursor: move;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+
+.box-ticket-default {
+  background: #ecf0f1;
+  padding: 10px!important;
+  height: 334px;
+  border: 3px dashed #ccc;
+  overflow: scroll;
+}
+
+.box-ticket-custom {
+  background: #ecf0f1;
+  padding: 10px 10px 10px!important;
+  height: 334px;
+  border: 3px dashed #ccc;
+  overflow: scroll;
+}
+
+.vamp {
+  background: #2980b9;
+  margin: 5px 0;
+  list-style: none;
+  padding: 8px;
+  color: #ffffff;
+  font-size: 10px;
+}
+button.btn.btn-default {
+  background-color: #ee042c!important;
+  -webkit-box-shadow: none!important;
+  box-shadow: none!important;
+  margin: 15px 15px 10px!important;
+  color: #fff;
+  float: right;
+  outline: none!important;
+}
+.btn.disabled, .btn:disabled {
+  opacity: .65!important;
+}
+
+.configura-ticket-wpr.col-sm-12 {
+  padding: 0;
+}
+
+.exchange-icon {
+  color: #333;
+  height: 100%;
+  position: relative;
+  top: 145px;
+  margin: 0 10px;
+}
+p.texto-box1 {
+  text-align: center;
+  font-size: 10px;
+  font-weight: 700;
+  display: block;
+  margin: 0 auto;
+  opacity: 0.5;
+  width: 100%;
+  pointer-events: none;
+  height: auto;
+  justify-content: center;
+  line-height: 100%;
+  position: relative;
+  top: 50%;
+  left: 7px;
+}

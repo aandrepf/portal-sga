@@ -1,0 +1,20 @@
+<div class="col-lg-12">
+  <div class="page-header">
+    <h3>{{ data.tituloDialog }}</h3>
+  </div>
+
+  <form [formGroup]="paginaGroup" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <input matInput placeholder="Nome Página" formControlName="descricao">
+      <mat-error>Campo Obrigatório</mat-error>
+    </mat-form-field>
+
+    <mat-checkbox formControlName="prioritario">Tem Icone Prioritário</mat-checkbox><br>
+    <mat-checkbox formControlName="voltar">Tem Botão de Voltar</mat-checkbox>
+
+    <mat-dialog-actions class="mat-dialog-footer" align="end">
+      <button mat-raised-button matDialogClose>FECHAR</button>
+      <button mat-raised-button class="custom-btn" [disabled]="paginaGroup.invalid">{{ data.btnCustom }}</button>
+    </mat-dialog-actions>
+  </form>
+</div>

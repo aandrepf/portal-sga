@@ -1,0 +1,27 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-12">
+      <p class="dragdroptitle">Cadastro de Filas <code><strong>{{ descricao }}</strong></code></p>
+      <div class="flex">
+        <div class="container box-ticket-custom" dragula="filas" [(dragulaModel)]="cadastro">
+          <p *ngIf="cadastro.length === 0" class="texto-box1">AS FILAS SELECIONADAS FICAM AQUI!</p>
+          <div class="vamp" *ngFor="let nome of cadastro">{{ nome.idCategoria }} - {{ nome.nomeFila }}</div>
+        </div>
+        <div class="exchange-icon">
+            <i class="fa fa-exchange fa-2x" aria-hidden="true"></i>
+        </div>
+        <div class="container box-ticket-default" dragula="filas" [(dragulaModel)]="defaultFilas">
+          <p *ngIf="defaultFilas.length === 0" class="texto-box1">ARRASTE PARA O OUTRO BOX AS FILAS QUE DESEJA CONFIGURAR</p>
+          <div class="vamp" *ngFor="let nome of defaultFilas">{{ nome.idCategoria }} - {{ nome.nomeFila }}</div>
+        </div>
+      </div>
+
+      <button class="btn btn-default"
+        [style.opacity]="cadastro.length === 0 ? '0.65' : '1'"
+        [style.cursor]="cadastro.length === 0 ? 'not-allowed' : 'default'"
+        [matTooltipDisabled]="cadastro.length == 0 ? false : true"
+        matTooltipPosition="above"
+        matTooltip=" Cadastro do grupo não pode ser vazio. Insira ao menos uma fila no grupo"
+        matTooltipClass="example-tooltip-red"
+        (click)="salvarFilas()">SALVAR</button>
+</div>

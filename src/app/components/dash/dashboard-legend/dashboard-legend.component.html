@@ -1,0 +1,24 @@
+<div class="row text-light">
+  <div class="col col-sm-1">
+    <button mat-icon-button matTooltip="VOLTAR" class="btn btn-sm btn-link" (click)="goBack()" *ngIf="nivel !== 2">
+      <i class="fa fa-angle-left fa-2x" aria-hidden="true"></i>
+    </button>
+  </div>
+  <!--div class="col col-sm-5 text-center">
+    <h4>
+      <span class="badge legend-badge">{{ nuControl.Nome }}</span>
+    </h4>
+  </div-->
+  <div class="col col-sm-5 text-center">
+    <small>Total de senhas chamadas no dia</small>
+    <h5 [@bounceOutIn]="legendAnimateState"><span class="badge badge-secondary legend-badge">{{ calcs.QCA | zeronleft }}</span></h5>
+  </div>
+  <div class="col col-sm-3 text-center">
+    <small>Média de atedimento no prazo</small>
+    <h5 [@bounceOutIn]="legendAnimateState"><span class="badge badge-secondary legend-badge">{{ calcs.MediaPrazo | number:'1.0-0' }}%</span></h5>
+  </div>
+  <div class="col col-sm-3 text-center">
+    <small>Tempo médio de espera</small>
+    <h5 [@bounceOutIn]="legendAnimateState"><span class="badge badge-secondary legend-badge">{{ calcs.MaiorTE | sectohms }}</span></h5>
+  </div>
+</div>

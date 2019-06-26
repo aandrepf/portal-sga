@@ -1,0 +1,21 @@
+.header-content {
+  margin: 0px 0 10px;
+}
+.date-title {
+  text-transform: capitalize;
+  margin: 25px 0 0;
+}
+.arrow-prev, .arrow-next {
+  margin-top: 30px;
+}
+.arrow-next i, .arrow-prev i {
+  opacity: 0.8;
+}
+.arrow-next i:hover, .arrow-prev i:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+small:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}

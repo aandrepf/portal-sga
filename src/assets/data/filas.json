@@ -1,0 +1,250 @@
+{
+  "DescricaoFilas": [
+    {
+      "id": 1,
+      "descricao": "Fila 1"
+    },
+    {
+      "id": 2,
+      "descricao": "Fila 2"
+    },
+    {
+      "id": 3,
+      "descricao": "Fila 3"
+    },
+    {
+      "id": 4,
+      "descricao": "Fila 4"
+    },
+    {
+      "id": 5,
+      "descricao": "Fila 5"
+    },
+    {
+      "id": 6,
+      "descricao": "Fila 6"
+    }
+  ],
+  "GrupoFilas": [
+    {
+      "id": 1,
+      "idFila": 1,
+      "descricaoFila": "Fila 1",
+      "categorias": [
+        {
+          "id": 1,
+          "nomeFila": "PAGAMENTOS E RECEBIMENTOS"
+        },
+        {
+          "id": 2,
+          "nomeFila": "PRIORITÁRIO"
+        },
+        {
+          "id": 3,
+          "nomeFila": "CAIXA BRADESCO PRIME"
+        },
+        {
+          "id": 7,
+          "nomeFila": "SERVIÇOS DIVERSOS"
+        },
+        {
+          "id": 8,
+          "nomeFila": "PREVIDÊNCIA"
+        },
+        {
+          "id": 13,
+          "nomeFila": "RET. CARTÃO DE DEBITO, CHEQUE DEVOLVIDO, TA"
+        },
+        {
+          "id": 14,
+          "nomeFila": "SEGUROS"
+        },
+        {
+          "id": 16,
+          "nomeFila": "RET. CARTÃO DE DEBITO, CHEQUE DEVOLVIDO, TA"
+        },
+        {
+          "id": 4,
+          "nomeFila": "CAIXA BRADESCO EXCLUSIVE"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "idFila": 2,
+      "descricaoFila": "Politica 2",
+      "categorias": [
+        {
+          "id": 1,
+          "nomeFila": "PAGAMENTOS E RECEBIMENTOS"
+        },
+        {
+          "id": 2,
+          "nomeFila": "PRIORITÁRIO"
+        },
+        {
+          "id": 3,
+          "nomeFila": "CAIXA BRADESCO PRIME"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "idFila": 3,
+      "descricaoFila": "Fila 3",
+      "categorias": [
+        {
+          "id": 1,
+          "nomeFila": "PAGAMENTOS E RECEBIMENTOS"
+        },
+        {
+          "id": 2,
+          "nomeFila": "PRIORITÁRIO"
+        },
+        {
+          "id": 7,
+          "nomeFila": "SERVIÇOS DIVERSOS"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "idFila": 4,
+      "descricaoFila": "Fila 4",
+      "categorias": [
+        {
+          "id": 1,
+          "nomeFila": "PAGAMENTOS E RECEBIMENTOS"
+        },
+        {
+          "id": 2,
+          "nomeFila": "PRIORITÁRIO"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "idFila": 5,
+      "descricaoFila": "Fila 5",
+      "categorias": [
+        {
+          "id": 6,
+          "nomeFila": "GERÊNCIA"
+        },
+        {
+          "id": 3,
+          "nomeFila": "CAIXA BRADESCO PRIME"
+        },
+        {
+          "id": 4,
+          "nomeFila": "CAIXA BRADESCO EXCLUSIVE"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "idFila": 6,
+      "descricaoFila": "Fila 6",
+      "categorias": [
+        {
+          "id": 1,
+          "nomeFila": "PAGAMENTOS E RECEBIMENTOS"
+        }
+      ]
+    }
+  ],
+  "Filas": [
+    {
+      "id": 1,
+      "nomeFila": "PAGAMENTOS E RECEBIMENTOS"
+    },
+    {
+      "id": 2,
+      "nomeFila": "PRIORITÁRIO"
+    },
+    {
+      "id": 3,
+      "nomeFila": "CAIXA BRADESCO PRIME"
+    },
+    {
+      "id": 4,
+      "nomeFila": "CAIXA BRADESCO EXCLUSIVE"
+    },
+    {
+      "id": 5,
+      "nomeFila": "ABERTURA DE CONTAS"
+    },
+    {
+      "id": 6,
+      "nomeFila": "GERÊNCIA"
+    },
+    {
+      "id": 7,
+      "nomeFila": "SERVIÇOS DIVERSOS"
+    },
+    {
+      "id": 8,
+      "nomeFila": "PREVIDÊNCIA"
+    },
+    {
+      "id": 9,
+      "nomeFila": "CAIXA CHEQUE DEVOLVIDO"
+    },
+    {
+      "id": 10,
+      "nomeFila": "EMPRESTIMOS/FINANCIAMENTOS/INVESTIMENTOS"
+    },
+    {
+      "id": 11,
+      "nomeFila": "GERENCIA BRADESCO EMPRESAS E NEGOCIOS"
+    },
+    {
+      "id": 12,
+      "nomeFila": "GERENCIA BRADESCO EXCLUSIVE"
+    },
+    {
+      "id": 13,
+      "nomeFila": "RET. CARTÃO DE DEBITO, CHEQUE DEVOLVIDO, TA"
+    },
+    {
+      "id": 14,
+      "nomeFila": "SEGUROS"
+    },
+    {
+      "id": 15,
+      "nomeFila": "PAGAMENTOS E RECEBIMENTOS"
+    },
+    {
+      "id": 16,
+      "nomeFila": "RET. CARTÃO DE DEBITO, CHEQUE DEVOLVIDO, TA"
+    },
+    {
+      "id": 17,
+      "nomeFila": "CAIXA CLIENTES ACIMA 80 ANOS"
+    },
+    {
+      "id": 18,
+      "nomeFila": "ABERTURA DE CONTAS, EMPRESTIMOS, FINANCIAMENTOS"
+    },
+    {
+      "id": 19,
+      "nomeFila": "OUTROS SERVIÇOS, PEDIDO DE CARTÃO, PROVA DE VIDA"
+    },
+    {
+      "id": 20,
+      "nomeFila": "ABERTURA DE CONTAS, EMPRESTIMOS, FINANCIAMENTOS"
+    },
+    {
+      "id": 21,
+      "nomeFila": "OUTROS SERVIÇOS, PEDIDO DE CARTÃO, PROVA DE VIDA"
+    },
+    {
+      "id": 22,
+      "nomeFila": "GERENCIA CLIENTES ACIMA 80 ANOS"
+    },
+    {
+      "id": 23,
+      "nomeFila": "GERENCIA BRADESCO PRIME"
+    }
+  ]
+}

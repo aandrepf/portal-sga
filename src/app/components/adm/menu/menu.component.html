@@ -1,0 +1,21 @@
+<ngx-spinner bdColor ="rgba(51, 51, 51, 0)" size ="default" color ="#ee042c" type ="line-scale"></ngx-spinner>
+<div class="container-fluid" *ngIf="load">
+  <div class="row">
+    <div class="container-lg-12">
+      <div class="page-header">
+        <h3>Cadastro Menus</h3>
+      </div>
+      <mat-tab-group (selectedTabChange)="selectedTab($event)" [selectedIndex]="selectedIndex">
+        <!--MENUS PRINCIPAIS-->
+        <mat-tab label="Menus">
+         <app-menu-pai (mandaIdMenuPai)="recebeIdMenuPai($event)"></app-menu-pai>
+        </mat-tab>
+
+        <!--SUB MENUS-->
+        <mat-tab label="Sub Menus" *ngIf="showTabs">
+          <app-sub-menu [idMenuPai]="idMenuPai" [indexTab]="selectedIndex"></app-sub-menu>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+</div>

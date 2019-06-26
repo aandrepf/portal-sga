@@ -1,0 +1,52 @@
+<!--SELECT QUE FAZ O FILTRO DO FERIADO SELECIONANDO NO CALENDARIO-->
+<div class="filter-wpr col-xs-12 col-lg-6">
+  <app-feriado-filter (selecionado)="recSelecionado($event)" [tab]="selectTab" [selectHeader]="headerSelect"></app-feriado-filter>
+</div>
+
+<!--HEADER DO CALENDÁRO-->
+<div class="header-wpr col-xs-12 col-lg-6">
+    <app-feriado-header [(view)]="view" [(viewDate)]="viewDate" (selecionado)="recHeader($event)"></app-feriado-header>
+</div>
+
+<!--TEMPLATE QUE MONTA O CALENDARIO-->
+<ng-template #customCellTemplate let-day="day" let-locale="locale">
+  <!--VALOR DO DIA-->
+  <div class="cal-cell-top">
+    <span class="cal-day-number">{{ day.date | calendarDate:'monthViewDayNumber':locale }}</span>
+  </div>
+
+  <!--MARCADOR DE QUANTIDADE DE EVENTOS NO DIA-->
+  <div class="cell-totals">
+    <span
+      *ngFor="let group of day.eventGroups"
+      class="badge badge-{{ group[0] }}" matTooltip="Tipo de Cadastro : {{ group[0] }}" matTooltipClass="example-tooltip-red"
+      matTooltipPosition="left" aria-label="Shows a red tooltip">
+      {{ group[1].length }}
+    </span>
+  </div>
+</ng-template>
+
+<div [ngSwitch]="view" class="col-lg-12 calendario-wpr">
+  <mwl-calendar-month-view
+    *ngSwitchCase="'month'"
+    [viewDate]="viewDate"
+    [events]="events"
+    [excludeDays]="excludeDays"
+    [refresh]="refresh"
+    [cellTemplate]="customCellTemplate"
+    (dayClicked)="clicouDia($event.day.date)"
+    (beforeViewRender)="beforeMonthViewRender($event)">
+  </mwl-calendar-month-view>
+  <mwl-calendar-week-view
+    *ngSwitchCase="'week'"
+    [viewDate]="viewDate"
+    [events]="events"
+    [refresh]="refresh">
+  </mwl-calendar-week-view>
+  <mwl-calendar-day-view
+    *ngSwitchCase="'day'"
+    [viewDate]="viewDate"
+    [events]="events"
+    [refresh]="refresh">
+  </mwl-calendar-day-view>
+</div>

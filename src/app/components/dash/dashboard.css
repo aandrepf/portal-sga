@@ -1,0 +1,22 @@
+.jvectormap-legend {
+  background: transparent !important;
+  width: 170px !important;
+}
+
+.jvectormap-legend-title {
+  font-size: 8.5px !important;
+  color: #424242;
+  text-align: left !important;
+  margin-bottom: 5px !important;
+}
+
+.jvectormap-legend-cnt-v .jvectormap-legend-tick-sample {
+    height: 20px;
+    width: 20px;
+    color: #424242;
+    display: inline-block;
+    vertical-align: none !important;
+}
+.jvectormap-legend-tick-text {
+  color: #424242;
+}

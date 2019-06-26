@@ -1,0 +1,19 @@
+button.btn.btn-default {
+  background-color: #ee042c!important;
+  box-shadow: none!important;
+  margin: 20px 15px!important;
+  float: right!important;
+  color: #fff;
+}
+.table-responsive {
+  /*overflow-x: unset!important;*/
+  overflow: visible;
+  text-align: center;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+  padding: 12px 5px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-bottom: 1px solid #e1e1e1;
+  border-top: transparent!important;
+}

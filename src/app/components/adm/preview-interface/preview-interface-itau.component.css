@@ -1,0 +1,120 @@
+.container {
+  max-width: 100%;
+  height: auto;
+}
+.col-sm-12.container-wrapper {
+  height: 505px;
+  pointer-events: none;
+}
+.h-100 {
+  *border: 1px dotted yellow;
+}
+.preview-totem {
+  font-family: ItauText_Lt;
+  text-align: center;
+  margin: 0px 0 20px;
+  font-size: 20px;
+}
+.card {
+  border: 0px dotted #fff!important;
+  background-color: transparent!important;
+  margin: 418px auto;
+}
+.content-wrapper.container {
+  background-color: #4a4a4a;
+  margin: 0 auto;
+  width: 100%;
+  overflow: hidden;
+  max-width: 768px!important;
+  height: 1366px!important;
+  color: #fff;
+  transform: scale(0.38);
+  -webkit-transform: scale(0.38);
+  -ms-transform: scale(0.38);
+  -o-transform: scale(0.38);
+  position: relative;
+  top: -440px;
+  left: 20px;
+}
+span.icon-volta {
+  margin: 0;
+  position: relative;
+  left: 20px;
+  top: 30px;
+  background: #fff;
+  padding: 6px 8px;
+  border-radius: 5px;
+  color: #424242;
+  border: 1px solid #424242;
+  z-index: 10;
+}
+span.icon-volta:hover {
+  cursor: pointer;
+}
+.col .row {
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+.col-sm-12.atendimento-msg {
+  margin: 0 0 0;
+  padding: 0;
+  text-align: center;
+}
+.atendimento-msg p {
+  font-family: ItauText_Lt;
+  margin: 0;
+  font-size: 65px;
+}
+.atendimento-usr-interaction {
+  margin: 20px 0 0;
+  padding: 0;
+}
+button.btn-brand-atendimento, button.btn-brand-gerencia, button.btn-brand-prioritario {
+  min-width: 90%;
+  min-height: 120px;
+  box-shadow: none!important;
+  outline: none!important;
+  padding: 0px 30px;
+  display: block;
+  margin: 0 auto 20px;
+  border-radius: 20px;
+  line-height: 72px;
+}
+button.btn-brand-atendimento {
+  background-color: #f36d00!important;
+  border-color: #f36d00!important;
+}
+button.btn-brand-gerencia {
+  background-color: #969290!important;
+  border-color: #969290!important;
+  margin-top: 20px;
+}
+button.btn-brand-prioritario {
+  background-color: #ffffff!important;
+  border-color: #ffffff!important;
+  color: #969290!important;
+}
+button > p {
+  margin: 0;
+}
+i.fa.fa-link {
+  font-size: 38px!important;
+  position: relative;
+  top: 0px;
+  right: 0px;
+}
+.footer {
+  text-align: left;
+  position: fixed;
+  bottom: 10px;
+  left: 20px;
+}
+.footer p {
+  font-family: ItauText_Lt;
+  margin: 0;
+  font-size: 45px;
+}
+.footer p:hover {
+  cursor: pointer;
+}

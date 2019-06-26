@@ -1,0 +1,8 @@
+<mat-form-field>
+  <mat-select [(value)]="selected">
+    <mat-option value="selecione" (click)="selectedFilter(0)">Selecione um dos filtros abaixo</mat-option>
+    <mat-option *ngFor="let itens of classe" [value]="itens.idClasseferiado" (click)="selectedFilter(itens.idClasseferiado)">{{ itens.descricao }}</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<small (click)="resetFilter()"><i class="fa fa-eraser" aria-hidden="true"></i>resetar filtro</small>

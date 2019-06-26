@@ -1,0 +1,14 @@
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+  margin: 0px;
+  line-height: 30px;
+}
+small {
+  position: relative;
+  top: -10px;
+}
+small:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

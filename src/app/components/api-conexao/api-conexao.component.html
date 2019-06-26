@@ -1,0 +1,45 @@
+<ngx-spinner bdColor ="rgba(51, 51, 51, 0)" size ="default" color ="#ee042c" type ="line-scale"></ngx-spinner>
+<div class="container-fluid" *ngIf="load">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="page-header">
+        <h3>API de Conexão</h3>
+        <small>Formulário para configurar a <em>Connection String</em></small>
+      </div>
+
+      <form class="example-form" [formGroup]="conexaoForm" (ngSubmit)="onSubmit()">
+
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Servidor" formControlName="ServerName">
+          <mat-hint>Pode ser utilizado o ip da máquina</mat-hint>
+          <mat-error>Campo Obrigatório</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Banco de Dados" formControlName="Database">
+          <mat-error>Campo Obrigatório</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Usuário" formControlName="UserId">
+          <mat-error>Campo Obrigatório</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Password" type="password" formControlName="Password" appPassword>
+          <i id="showPass" class="fa fa-eye-slash" aria-hidden="true"></i>
+          <mat-error>Campo Obrigatório</mat-error>
+        </mat-form-field>
+
+
+
+
+
+        <button mat-raised-button color="primary" [disabled]="conexaoForm.invalid">ENVIAR</button>
+
+      </form>
+
+      <div class="alert alert-info" role="alert" *ngIf="msg">{{ msg | json }}</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+[
+  {
+    "urlServer": "http://servidordb12/sga301/SGA-Services-Consulta/SgfConsulta.svc/",
+    "urlAzureServer": "https://341hubsgacorp.azurewebsites.net/",
+    "urlApplication": "https://341sga.azurewebsites.net/Monitoramentos/Geral.aspx",
+    "urlAuthentication": "https://341sga.azurewebsites.net/Autenticacao/Login.aspx",
+    "urlHub": "http://localhost/HubSGA/",
+    "urlDownloadXLSX": "http://localhost:8080"
+  }
+]

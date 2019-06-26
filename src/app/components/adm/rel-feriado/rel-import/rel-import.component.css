@@ -1,0 +1,102 @@
+.download-xlsx-wpr {
+  padding: 0 15px 46px;
+  margin-top: 20px;
+}
+.import-xlsx-wpr {
+  *padding: 0;
+  margin-top: 20px;
+}
+p.download-xlsx-text {
+  font-family: Roboto,"Helvetica Neue",sans-serif;
+  font-size: 13px;
+  text-align: center;
+  letter-spacing: -0.2px;
+}
+section.press {
+  margin: 20px 0;
+}
+section.press p {
+  color: #fff;
+  background-color: #207245;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  box-shadow: 0 10px #134429;
+  padding: 20px 65px;
+  font-size: 20px;
+  text-align: center;
+}
+section.press p:hover,
+section.press p.hover,
+.input-file-trigger:hover {
+  background-color: #2f8c59;
+  cursor: pointer;
+}
+section.press p:active,
+section.press p.active,
+.input-file-trigger:active {
+  background-color: #207245;
+  box-shadow: 0 5px #134429;
+  transform: translateY(5px);
+}
+.input-file:hover, .input-file:active {
+  display: none;
+}
+.img-download-xls {
+  width: 32px;
+  height: auto;
+}
+.form-control-file { border: none;cursor: pointer; }
+
+.input-file-container {
+  position: relative;
+}
+.input-file-trigger {
+  color: #fff;
+  background-color: #207245;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  box-shadow: 0 10px #134429;
+  padding: 22px 65px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 400;
+  margin: 10px 0 20px;
+  width: 100%;
+}
+.input-file {
+  position: absolute;
+  opacity: 0;
+  padding: 0;
+  cursor: pointer;
+  z-index: -1;
+  width: 100%;
+}
+.file-return {
+  margin: 0;
+}
+.file-return:not(:empty) {
+  margin: 1em 0;
+}
+.file-return {
+  font-style: italic;
+  font-size: .9em;
+  font-weight: bold;
+}
+.file-return:hover{
+  cursor: pointer;
+}
+.file-return:not(:empty):before {
+  content: "Arquivo Selecionado: ";
+  font-style: normal;
+  font-weight: normal;
+}
+.file-return:not(:empty):after {
+  font-family: FontAwesome;
+  content: ' \f014';
+  font-size: 15px;
+  font-style: normal;
+  font-weight: bold;
+  color: #cc092f;
+}

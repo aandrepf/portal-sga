@@ -1,0 +1,55 @@
+<div class="no-graf-info" *ngIf="dashCount === 0;else grafico">
+  <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+  <h3>Desculpe! Não possuimos registros de dados até o momento.</h3>
+</div>
+<ng-template #grafico>
+  <div class="fixed-top animated zoomIn" *ngIf="load">
+    <div class="legend-adjust float-right">
+      <app-dashboard-legend (eventFilter)="backToNivelUnidadePai($event)" [dashboard]="dashboard" [nuControl]="nuControl"></app-dashboard-legend>
+    </div>
+  </div>
+  <div class="card-deck" style="margin-top: 3rem!important" *ngIf="load">
+    <!-- GRAFICO-->
+    <div class="card text-white text-center col-lg-12 col-sm-12">
+      <div class="card-header">
+        EVOLUTIVO QCE, QCA, QSC
+      </div>
+      <div class="card-body">
+        <app-dashboard-evolutivo [@zoomOutIn]="cardAnimateState" [dashboard]="dashboard"></app-dashboard-evolutivo>
+      </div>
+    </div>
+
+    <!-- GRAFICO DE PIZZA -->
+    <div class="card text-white text-center col-lg-6 col-sm-12">
+      <div class="card-header">
+        PERCENTUAL DE CRITICADE DE ATENDIMENTO
+      </div>
+      <div class="card-body">
+        <app-dashboard-totem-chart [@zoomOutIn]="cardAnimateState" [dashboard]="dashboard"></app-dashboard-totem-chart>
+      </div>
+    </div>
+
+    <!-- GRAFICO HORIZONTAL -->
+    <div class="card text-white text-center col-lg-6 col-sm-12">
+      <div class="card-header">
+        ATENDIMENTO
+      </div>
+      <div class="card-body">
+        <app-dashboard-qca-chart [@zoomOutIn]="cardAnimateState" [dashboard]="dashboard"></app-dashboard-qca-chart>
+      </div>
+      <a class="btn btn-sm btn-link" (click)="handleTableShow()">
+          <div *ngIf="isTableShow">
+            ocultar tabela <i class="fa fa-angle-up fa-1x" aria-hidden="true"></i>
+          </div>
+          <div *ngIf="!isTableShow">
+            mostrar tabela detalhada <i class="fa fa-angle-down fa-1x" aria-hidden="true"></i>
+          </div>
+        </a>
+    </div>
+
+    <!-- TABELA -->
+    <div class="card text-white text-center col-lg-12 col-sm-12">
+      <app-dashboard-table *ngIf="isTableShow" (eventFilter)="getTableSelectedItem($event)" [dashboard]="dashboard" [nuControl]="nuControl"></app-dashboard-table>
+    </div>
+  </div>
+</ng-template>

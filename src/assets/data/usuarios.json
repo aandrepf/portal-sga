@@ -1,0 +1,55 @@
+{
+  "NivelUnidade": [
+    {
+      "id": 1,
+      "nivel_unidade": 0,
+      "descr": "MATRIZ",
+      "nu_superior": null
+    },
+    {
+      "id": 2,
+      "nivel_unidade": 1,
+      "descr": "GERÊRENCIA REGIONAL",
+      "nu_superior": 2
+    },
+    {
+      "id": 3,
+      "nivel_unidade": 2,
+      "descr": "DIRETORIA REGIONAL",
+      "nu_superior": 0
+    },
+    {
+      "id": 4,
+      "nivel_unidade": 9,
+      "descr": "JUNÇÃO/AGÊNCIA",
+      "nu_superior": 1
+    }
+  ],
+  "PerfilUsuario": [
+    {
+      "id": 1,
+      "descr": "ATENDENTE",
+      "nivel_unidade": 9
+    },
+    {
+      "id": 2,
+      "descr": "MONITOR",
+      "nivel_unidade": 9
+    },
+    {
+      "id": 3,
+      "descr": "ADMIN",
+      "nivel_unidade": 0
+    },
+    {
+      "id": 4,
+      "descr": "TECNICO AGÊNCIA",
+      "nivel_unidade": 0
+    },
+    {
+      "id": 5,
+      "descr": "GERÊNCIA DE INCIDENTES",
+      "nivel_unidade": 0
+    }
+  ]
+}

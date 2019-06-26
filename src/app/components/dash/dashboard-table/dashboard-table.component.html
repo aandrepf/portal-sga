@@ -1,0 +1,42 @@
+<table class="table table-dark table-striped table-borderless table-hover" sortable-table (sorted)="onSorted($event)">
+  <thead>
+    <tr>
+      <th class="text-center" sortable-column="nomeUnidade">{{ tituloTable }}</th>
+      <th class="text-center" sortable-column="nomeEmissor" *ngIf="nivelTable == 9">EMISSOR</th>
+      <th class="text-center" sortable-column="tme">TEMPO MÉDIO DE ESPERA</th>
+      <th class="text-center" sortable-column="qca">NUM. CLIENTES ATENDIDOS</th>
+      <th class="text-center" sortable-column="paa">ATDO DENTRO DO PRAZO</th>
+      <th class="text-center" *ngIf="nivelTable != 9" sortable-column="totalCritico">CRÍTICO</th>
+      <th class="text-center" *ngIf="nivelTable != 9" sortable-column="totalAlerta">ALERTA</th>
+      <th class="text-center" *ngIf="nivelTable != 9" sortable-column="totalNormal">NORMAL</th>
+      <th class="text-center" *ngIf="nivelTable != 9" sortable-column="totalOffLine">TOTENS OFFLINE</th>
+      <th class="text-center" sortable-column="status" *ngIf="nivelTable == 9">STATUS</th>
+      <th class="text-center" sortable-column="qce" *ngIf="nivelTable == 9">NUM. CLIENTES NA FILA</th>
+      <th class="text-center" sortable-column="qtma" *ngIf="nivelTable == 9">CAIXAS LOGADOS</th>
+      <th class="text-center" sortable-column="qsc" *ngIf="nivelTable == 9">SENHAS CANCELADAS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr (click)="goTo(item)" *ngFor="let item of dashboard | paginate: { itemsPerPage: 5, currentPage: p }">
+      <td>{{ item.nomeUnidade }}</td>
+      <td *ngIf="nivelTable == 9">{{ item.nomeEmissor }}</td>
+      <td class="text-center">{{ item.tme | sectohms }}</td>
+      <td class="text-center">{{ item.qca | decformat }}</td>
+      <td class="text-center">{{ item.paa | number:'1.0-0' }}%</td>
+      <td class="text-center" *ngIf="nivelTable != 9">{{ item.totalCritico | zeronleft }}</td>
+      <td class="text-center" *ngIf="nivelTable != 9">{{ item.totalAlerta | zeronleft }}</td>
+      <td class="text-center" *ngIf="nivelTable != 9">{{ item.totalNormal | zeronleft }}</td>
+      <td class="text-center" *ngIf="nivelTable != 9">{{ item.totalOffLine | zeronleft }}</td>
+      <td class="text-center" *ngIf="nivelTable == 9 && item.status == 0">CRÍTICO</td>
+      <td class="text-center" *ngIf="nivelTable == 9 && item.status == 1">ALERTA</td>
+      <td class="text-center" *ngIf="nivelTable == 9 && item.status == 2">NORMAL</td>
+      <td class="text-center" *ngIf="nivelTable == 9 && item.status == 3">OFFLINE</td>
+      <td class="text-center" *ngIf="nivelTable == 9">{{ item.qce | zeronleft }}</td>
+      <td class="text-center" *ngIf="nivelTable == 9">{{ item.qtma | zeronleft }}</td>
+      <td class="text-center" *ngIf="nivelTable == 9">{{ item.qsc | zeronleft }}</td>
+    </tr>
+  </tbody>
+</table>
+<div class="float-right" style="margin-right:20px!important;">
+  <pagination-controls (pageChange)="p = $event" previousLabel="" nextLabel=""></pagination-controls>
+</div>

@@ -1,0 +1,43 @@
+.filter-wpr {
+  padding: 0;
+}
+.button-create-wpr {
+  padding: 30px 15px;
+}
+.button-create-wpr button {
+  float: right;
+  background-color: #ee042c;
+  color: #fff;
+}
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+  margin: 20px 0 10px;
+}
+.mat-elevation-z8 {
+  box-shadow: none;
+}
+table {
+  width: 100%;
+  text-align: center;
+}
+td.mat-cell, td.mat-footer-cell, th.mat-header-cell {
+  text-align: center;
+}
+th.mat-header-cell {
+  font-weight: 700;
+  color: rgba(0,0,0,0.7);
+}
+.mat-cell, .mat-footer-cell {
+  font-size: 12px;
+}
+i {
+  padding: 15px;
+}
+i:hover {
+  background-color: #ee042c;
+  color: white;
+  cursor: pointer;
+  font-weight: bolder !important;
+  box-shadow:0px 0px 5px #333333 !important;
+}

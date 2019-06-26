@@ -1,0 +1,9 @@
+span.abrangencia {
+  float: right;
+  font-size: 15px;
+  line-height: 25px;
+}
+span.abrangencia:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}

@@ -1,0 +1,24 @@
+<!--ngx-spinner bdColor ="rgba(51, 51, 51, 0)" size ="default" color ="#ee042c" type ="line-scale"></ngx-spinner-->
+<div class="container-fluid" *ngIf="load">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="page-header">
+        <h3>Relatórios de Feriados e Horário de Pico</h3>
+        <small>Destinado a fazer import e export de dados referentes aos feriados e horários de pico</small>
+      </div>
+      <mat-tab-group (selectedTabChange)="selectedTab($event)" [selectedIndex]="selectedIndex">
+        <!--TAB ONDE FICA OS BOTOES DE IMPORT, DOWNLOAD E EXPORT-->
+        <mat-tab label="Gerenciamento de Relatórios">
+          <app-rel-import (sendWS)="getWS($event)" (sendSheets)="getSheets($event)"></app-rel-import>
+
+          <app-rel-export></app-rel-export>
+        </mat-tab>
+
+        <!--WORKSHEETS DA PLANILHA IMPORTADA-->
+        <mat-tab *ngFor="let ws of listaWS" label="{{ ws }}">
+         <app-rel-worksheets [recebeWS]="ws" [recebeSheets]="listaSheets" (change)="valorTab"></app-rel-worksheets>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+</div>

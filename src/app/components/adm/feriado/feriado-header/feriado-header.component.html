@@ -1,0 +1,28 @@
+<div class="row text-center header-content">
+  <div class="col-md-1">
+    <div
+      class="arrow-prev"
+      mwlCalendarPreviousView
+      [view]="view"
+      [(viewDate)]="viewDate"
+      (viewDateChange)="viewDateChange.next(viewDate)"
+      (click)="resetFilter()">
+      <i class="fa fa-chevron-left fa-2x" aria-hidden="true"></i>
+    </div>
+  </div>
+  <div class="col-md-10">
+    <h3 class="date-title">{{ viewDate | calendarDate:(view + 'ViewTitle') }}</h3>
+    <small mwlCalendarToday [(viewDate)]="viewDate" (viewDateChange)="viewDateChange.next(viewDate)"> voltar para data atual</small>
+  </div>
+  <div class="col-md-1">
+  <div
+    class="arrow-next"
+    mwlCalendarNextView
+    [view]="view"
+    [(viewDate)]="viewDate"
+    (viewDateChange)="viewDateChange.next(viewDate)"
+    (click)="resetFilter()">
+    <i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i>
+  </div>
+  </div>
+</div>

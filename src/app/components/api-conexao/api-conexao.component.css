@@ -1,0 +1,36 @@
+h3 {
+  padding: 0 10px;
+}
+.mat-raised-button:disabled {
+  float: right;
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.2)!important;
+  color: rgba(0,0,0,.2)!important;
+  box-shadow: 0 0 0 0 rgba(0,0,0,.2), 0 0 0 0 rgba(0,0,0,.14), 0 0 0 0 rgba(0,0,0,.12);
+}
+.mat-raised-button {
+  float: right;
+  margin-top: 20px;
+  background-color: #ee042c!important;
+  color: #fff!important;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+form {
+  margin-bottom: 80px;
+}
+.example-full-width {
+  width: 100%;
+  border: none!important;
+  margin: 10px 0 0!important;
+}
+i.fa.fa-eye, i.fa.fa-eye-slash {
+  float: right;
+  padding: 10px 5px 0;
+  position: absolute;
+  right: 5px;
+  top: -7px;
+  color: #333;
+}
+i.fa.fa-eye:hover, i.fa.fa-eye-slash:hover {
+  cursor: pointer;
+}

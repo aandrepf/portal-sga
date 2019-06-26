@@ -1,0 +1,84 @@
+{
+  "Menu": [
+    {
+      "id": 1,
+      "id_menu_pai": 0,
+      "nome": "ADMINISTRAÇÃO",
+      "url": "",
+      "cud": 0,
+      "id_cliente": 1,
+      "active": 1,
+      "posicao": 1
+    },
+    {
+      "id": 2,
+      "nome": "MONITORAMENTOS",
+      "url": "",
+      "id_menu_pai": 0,
+      "cud": 0,
+      "id_cliente": 1,
+      "active": 1,
+      "posicao": 2
+    },
+    {
+      "id": 3,
+      "nome": "RELATÓRIOS",
+      "url": "/adm-relatorios",
+      "id_menu_pai": 0,
+      "cud": 0,
+      "id_cliente": 1,
+      "active": 1,
+      "posicao": 3
+    },
+    {
+      "id": 4,
+      "nome": "MANUTENÇÃO",
+      "url": "",
+      "id_menu_pai": 0,
+      "cud": 0,
+      "id_cliente": 1,
+      "active": 1,
+      "posicao": 4
+    },
+    {
+      "id": 5,
+      "nome": "CONFIGURAÇÃO",
+      "url": "",
+      "id_menu_pai": 0,
+      "cud": 0,
+      "id_cliente": 1,
+      "active": 0,
+      "posicao": 5
+    },
+    {
+      "id": 6,
+      "nome": "INTERFACE",
+      "url": "/adm-interface",
+      "id_menu_pai": 1,
+      "cud": 1,
+      "id_cliente": 1,
+      "active": 1,
+      "posicao": 1
+    },
+    {
+      "id": 7,
+      "id_menu_pai": 2,
+      "nome": "SGA DASHBOARD",
+      "url": "/dashboard",
+      "cud": 0,
+      "id_cliente": 1,
+      "active": 1,
+      "posicao": 1
+    },
+    {
+      "id": 8,
+      "id_menu_pai": 2,
+      "nome": "RESUMO ATENDIMENTOS",
+      "url": "/adm-atendimentos",
+      "cud": 0,
+      "id_cliente": 1,
+      "active": 1,
+      "posicao": 2
+    }
+  ]
+}

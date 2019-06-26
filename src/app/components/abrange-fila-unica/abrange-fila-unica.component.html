@@ -1,0 +1,67 @@
+<ngx-spinner bdColor ="rgba(51, 51, 51, 0)" size ="default" color ="#ee042c" type ="line-scale"></ngx-spinner>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="page-header">
+        <h3>
+          Definir abrangência do Grupo de Fila Única
+          <span class="abrangencia" (click)="navigateGrupo()">
+            <i class="fa fa-chevron-circle-left" aria-hidden="true"></i> voltar
+          </span>
+        </h3>
+      </div>
+
+      <form class="example-form" [formGroup]="abrangeForm" (ngSubmit)="onSubmit()">
+
+        <!--DIRETORIA EXECUTIVA-->
+        <mat-form-field class="example-full-width">
+          <mat-select placeholder="Diretoria Executiva" formControlName="rede" [(value)]="selected">
+            <mat-option disabled><strong>Selecione abaixo a diretoria executiva</strong></mat-option>
+            <mat-option value="0" (click)="montaRegional('0')">TODA REDE</mat-option>
+            <mat-option *ngFor="let item of redes" value="{{ item.value }}" (click)="montaRegional(item.value)">{{ item.text }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <!--GERENCIA EXECUTIVA-->
+        <mat-form-field class="example-full-width" *ngIf="abrangeForm.value.rede !== '0'">
+          <mat-select placeholder="Gerência Executiva" formControlName="regional">
+            <mat-option disabled><strong>Selecione uma regional</strong></mat-option>
+            <mat-option value="0" (click)="montaMunicipio('0')">TODAS AS REGIONAIS</mat-option>
+            <mat-option *ngFor="let item of regional" value="{{ item.value }}" (click)="montaMunicipio(item.value)">{{ item.text }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <!--MUNICIPIO-->
+        <mat-form-field class="example-full-width" *ngIf="abrangeForm.value.regional !== '0'">
+          <mat-select placeholder="Municipio" formControlName="municipio">
+            <mat-option disabled><strong>Selecione um município</strong></mat-option>
+            <mat-option value="0">TODOS OS MUNICÍPIOS</mat-option>
+            <mat-option *ngFor="let item of municipio" value="{{ item.value }}" (click)="montaAgencia(item.value)">{{ item.text }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <!--AGENCIA-->
+        <mat-form-field class="example-full-width" *ngIf="abrangeForm.value.municipio !== '0'">
+          <mat-select placeholder="Agência" formControlName="agencia">
+            <mat-option disabled><strong>Selecione uma agência</strong></mat-option>
+            <mat-option value="0">TODAS AS AGÊNCIAS</mat-option>
+            <mat-option *ngFor="let item of agencia" value="{{ item.value }}">{{ item.text }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <!--LISTA DE GRUPOS DE FILA UNICA-->
+        <mat-form-field class="example-full-width">
+          <mat-select placeholder="Grupo de Fila Única" formControlName="grupo">
+            <mat-option disabled><strong>Selecione uma grupo</strong></mat-option>
+            <mat-option *ngFor="let item of filas" value="{{ item.idFilaUnica }}">{{ item.nomeFila }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" [disabled]="abrangeForm.invalid">SALVAR</button>
+
+        <!--small>{{ abrangeForm.value | json }}</small-->
+
+      </form>
+    </div>
+  </div>
+</div>

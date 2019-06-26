@@ -1,0 +1,62 @@
+<div class="spinner-content">
+  <ngx-spinner bdColor = "rgba(51, 51, 51, 0)" size ="medium" color ="#207245" type = "ball-spin-clockwise-fade"></ngx-spinner>
+</div>
+<div class="col-xs-12 export-card">
+  <mat-accordion>
+    <mat-expansion-panel [(expanded)]="expandStatus">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Gerar relatórios de feriados
+        </mat-panel-title>
+        <mat-panel-description>
+          Clique aqui, preencha o formulário com as informações e baixe o arquivo com os dados
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <!--FORMULARIO-->
+      <form [formGroup]="relatorioFrm" (ngSubmit)="onSubmit()">
+        <!--FILTROS CLASSES DE FERIADOS formControlName="idClasseFeriado"-->
+        <mat-form-field>
+          <mat-select placeholder="Selecionar Classe de Feriado" formControlName="idClasse" [(value)]="selectedClasse">
+            <mat-option disabled><strong>Selecione abaixo o tipo de classe</strong></mat-option>
+            <mat-option value="0">TODOS</mat-option>
+            <mat-option value="1">FERIADO</mat-option>
+            <mat-option value="2">DIA DE PICO</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <!--FILTROS ABRANGENCIA DE FERIADOS formControlName="idTipoFeriado"-->
+        <mat-form-field>
+          <mat-select placeholder="Selecionar Abrangência" formControlName="idTipo">
+            <mat-option disabled><strong>Selecione abaixo o tipo de abrangêcia</strong></mat-option>
+            <mat-option value="0">TODOS</mat-option>
+            <mat-option value="1">NACIONAL</mat-option>
+            <mat-option value="2">ESTADUAL</mat-option>
+            <mat-option value="3">MUNICIPAL</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <!--FILTROS COM OS ESTADOS-->
+        <mat-form-field *ngIf="relatorioFrm.value.idTipo === '2' || relatorioFrm.value.idTipo === '3'">
+          <mat-select placeholder="Estado" formControlName="idEstado">
+            <mat-option disabled><strong>Selecione abaixo o estado</strong></mat-option>
+            <mat-option *ngFor="let item of estado" [value]="item.idEstado" (click)="getMunicipio(item.idEstado)">{{ item.nome | uppercase }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <!--FILTROS COM OS MUNICIPIOS A PARTIR DO ESTADO SELECIONADO-->
+        <mat-form-field *ngIf="relatorioFrm.value.idTipo === '3' && relatorioFrm.value.idEstado !== ''">
+          <mat-select placeholder="Municipio" formControlName="idCodMunic">
+            <mat-option disabled><strong>Selecione abaixo o municipio</strong></mat-option>
+            <mat-option *ngFor="let item of municipio" [value]="item.idCodmunic">{{ item.municipio }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-dialog-actions class="mat-dialog-footer" align="end" class="buttons">
+          <small (click)="resetaForm()"><i class="fa fa-eraser" aria-hidden="true"></i>&nbsp;&nbsp;LIMPAR FORMULÁRIO</small>
+          <button mat-raised-button class="custom-btn" [disabled]="relatorioFrm.invalid">EXPORTAR</button>
+        </mat-dialog-actions>
+      </form>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

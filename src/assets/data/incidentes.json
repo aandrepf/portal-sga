@@ -1,0 +1,228 @@
+{
+  "IncidenteStatus": [
+    {
+      "id": 1,
+      "descricao": "ABERTO"
+    },
+    {
+      "id": 2,
+      "descricao": "PAUSADO"
+    },
+    {
+      "id": 3,
+      "descricao": "ATENDENDO"
+    },
+    {
+      "id": 4,
+      "descricao": "FINALIZADO"
+    },
+    {
+      "id": 5,
+      "descricao": "CANCELADO"
+    }
+  ],
+  "Incidente": [
+    {
+      "id": 1,
+      "codUnidade": 4,
+      "idUsuario": "GESTOR PADRÃO",
+      "status": "ABERTO",
+      "tipoEquipamento": "TOTEM",
+      "itemEquipamento": "OUTROS",
+      "dataAbertura": "2018-10-15 16:09:05",
+      "dataFechamento": null,
+      "descricao": "INCIDENTE 1"
+    },
+    {
+      "id": 2,
+      "codUnidade": 4,
+      "idUsuario": "DIEGO TESTE",
+      "status": "FINALIZADO",
+      "tipoEquipamento": "TOTEM",
+      "itemEquipamento": "MONITOR NÃO LIGA",
+      "dataAbertura": "2018-10-15 16:09:05",
+      "dataFechamento": "2018-11-26 16:26:40",
+      "descricao": "INCIDENTE 2"
+    },
+    {
+      "id": 3,
+      "codUnidade": 4,
+      "idUsuario": "FABIO BELINI",
+      "status": "CANCELADO",
+      "tipoEquipamento": "TOTEM",
+      "itemEquipamento": "COMUNICAÇÃO COM SGA CENTRAL",
+      "dataAbertura": "2018-10-15 16:09:05",
+      "dataFechamento": "2018-11-19 17:07:13",
+      "descricao": "INCIDENTE 3"
+    },
+    {
+      "id": 4,
+      "codUnidade": 4,
+      "idUsuario": "FABIO BELINI",
+      "status": "ABERTO",
+      "tipoEquipamento": "TOTEM",
+      "itemEquipamento": "IMPRESSORA NÃO IMPRIME",
+      "dataAbertura": "2018-10-17 11:05:05",
+      "dataFechamento": null,
+      "descricao": "INCIDENTE 4"
+    },
+    {
+      "id": 5,
+      "codUnidade": 4,
+      "idUsuario": "DIEGO TESTE",
+      "status": "PAUSADO",
+      "tipoEquipamento": "CAIXA",
+      "itemEquipamento": "NÃO COMUNICA COM EMISSOR",
+      "dataAbertura": "2018-10-17 11:05:05",
+      "dataFechamento": null,
+      "descricao": "INCIDENTE 5"
+    },
+    {
+      "id": 6,
+      "codUnidade": 4,
+      "idUsuario": "GESTOR PADRÃO",
+      "status": "CANCELADO",
+      "tipoEquipamento": "TOTEM",
+      "itemEquipamento": "TOUCH SCREEN",
+      "dataAbertura": "2018-10-17 11:05:05",
+      "dataFechamento": "2018-10-17 12:56:44",
+      "descricao": "INCIDENTE 6"
+    },
+    {
+      "id": 7,
+      "codUnidade": 4,
+      "idUsuario": "DIEGO TESTE",
+      "status": "FINALIZADO",
+      "tipoEquipamento": "TOTEM",
+      "itemEquipamento": "TOUCH SCREEN",
+      "dataAbertura": "2018-10-17 11:05:05",
+      "dataFechamento": "2018-10-17 12:56:44",
+      "descricao": "INCIDENTE 7"
+    },
+    {
+      "id": 8,
+      "codUnidade": 1,
+      "idUsuario": "USUÁRIO QUE TEM PERMISSÃO",
+      "status": "FINALIZADO",
+      "tipoEquipamento": "TOTEM",
+      "itemEquipamento": "COMUNICAÇÃO COM SGA CENTRAL",
+      "dataAbertura": "2018-11-04 21:36:01",
+      "dataFechamento": "2018-11-04 21:36:29",
+      "descricao": "INCIDENTE 8"
+    },
+    {
+      "id": 9,
+      "codUnidade": 1,
+      "idUsuario": "USUÁRIO QUE TEM PERMISSÃO",
+      "status": "ABERTO",
+      "tipoEquipamento": "CAIXA",
+      "itemEquipamento": "NÃO COMUNICA COM EMISSOR",
+      "dataAbertura": "2018-11-19 17:11:40",
+      "dataFechamento": null,
+      "descricao": "INCIDENTE TESTE"
+    }
+  ],
+  "ItemEquipamento": [
+    {
+      "id": 1,
+      "tipoEquipamento": 1,
+      "descricao": "TOUCH SCREEN"
+    },
+    {
+      "id": 2,
+      "tipoEquipamento": 1,
+      "descricao": "COMUNICAÇÃO COM SGA CENTRAL"
+    },
+    {
+      "id": 3,
+      "tipoEquipamento": 1,
+      "descricao": "IMPRESSORA NÃO IMPRIME"
+    },
+    {
+      "id": 4,
+      "tipoEquipamento": 1,
+      "descricao": "MONITOR NÃO LIGA"
+    },
+    {
+      "id": 5,
+      "tipoEquipamento": 1,
+      "descricao": "EQUIPAMENTO NÃO LIGA"
+    },
+    {
+      "id": 6,
+      "tipoEquipamento": 1,
+      "descricao": "OUTROS"
+    },
+    {
+      "id": 7,
+      "tipoEquipamento": 2,
+      "descricao": "NÃO COMUNICA COM EMISSOR"
+    },
+    {
+      "id": 8,
+      "tipoEquipamento": 2,
+      "descricao": "OUTROS"
+    },
+    {
+      "id": 9,
+      "tipoEquipamento": 3,
+      "descricao": "NÃO COMUNICA COM EMISSOR"
+    },
+    {
+      "id": 10,
+      "tipoEquipamento": 3,
+      "descricao": "OUTROS"
+    },
+    {
+      "id": 11,
+      "tipoEquipamento": 4,
+      "descricao": "TECLADO NÃO FUNCIONA"
+    }
+  ],
+  "TipoEquipamento": [
+    {
+      "id": 1,
+      "tipoEquipamento": 1,
+      "descricao": "TOTEM"
+    },
+    {
+      "id": 2,
+      "tipoEquipamento": 2,
+      "descricao": "CAIXA"
+    },
+    {
+      "id": 3,
+      "tipoEquipamento": 3,
+      "descricao": "DISPLAY"
+    },
+    {
+      "id": 1,
+      "tipoEquipamento": 4,
+      "descricao": "OUTROS"
+    }
+  ],
+  "Unidades": [
+    {
+      "id": 1,
+      "codUnidade": 4,
+      "nome": "ASSIS CENTRO-SP"
+    }
+  ],
+  "Usuarios": [
+    {
+      "id": 1,
+      "idUsuario": 1,
+      "nome": "GESTOR PADRÃO"
+    },
+    {
+      "id": 2,
+      "idUsuario": 111,
+      "nome": "DIEGO TESTE"
+    },
+    {
+      "id": 3,
+      "idUsuario": 3456789,
+      "nome": "FABIO BELLINI"
+    }
+  ]
+}
