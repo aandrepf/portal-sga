@@ -7,16 +7,18 @@ import { Link, Botoes } from './../../../models/interface.model';
 
 @Component({
   selector: 'app-preview-interface',
-  templateUrl: './preview-interface.component.html',
-  styleUrls: ['./preview-interface-itau.component.css']
+  templateUrl: './preview-bradesco.component.html',
+  styleUrls: ['./preview-interface.component.css']
 })
 export class PreviewInterfaceComponent implements OnInit, OnDestroy {
   private _subinscricao: Subscription;
 
   public id: string;
   public interface: Paginas;
+  public pagina: Paginas;
   public acParam: string;
   public idParam: string;
+  public regexNegrito = /([*])(.+)/g;
 
   public links: Link[];
   public itemLinks: number;
@@ -43,6 +45,7 @@ export class PreviewInterfaceComponent implements OnInit, OnDestroy {
     this._subinscricao = this._interface.previewInterface(id).subscribe(
       (data: GetPreview) => {
         this.interface = data.interfaceEmissorPagina;
+        console.log('interface', this.interface);
         this.links = this.interface.interfaceEmissorLink;
         console.log('links', this.links);
         this.itemLinks = this.links.length;

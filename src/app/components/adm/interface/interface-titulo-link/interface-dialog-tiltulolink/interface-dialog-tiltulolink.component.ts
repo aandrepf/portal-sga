@@ -42,7 +42,7 @@ export class InterfaceDialogTiltulolinkComponent implements OnInit, OnDestroy {
     this.tituloGroup = this.fb.group({
       id: [this.data.operation === ENOperation.create ? 0 : ''],
       texto: ['', Validators.required],
-      fonte: ['', Validators.min(17)],
+      fonte: ['', Validators.min(14)],
       posicao: ['', Validators.required],
       negrito: [this.data.operation === ENOperation.create ? false : '', Validators.required],
     });

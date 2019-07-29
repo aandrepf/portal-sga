@@ -101,7 +101,7 @@ export class DashboardHomeComponent implements OnInit {
       this.dashboard = info;
       this.dashCount = this.dashboard.length;
 
-      /*if(this.dashboard.length !== 0) {
+      if(this.dashboard.length !== 0) {
         this.dados === true;
         this.tableAnimateState = 'up';
         this.cardAnimateState = 'in';
@@ -112,9 +112,9 @@ export class DashboardHomeComponent implements OnInit {
           NivelUnidadePai: nuPai.codigoUnidadePai,
           Nome: nuPai.nome
         };
-      }*/
+      }
 
-      if(this.dashboard.length === 0) {
+      /*if(this.dashboard.length === 0) {
         switch(nuPai.nivelunidade) {
           case 2:
             this.dashboard = GlobalStats.REDE;
@@ -137,7 +137,7 @@ export class DashboardHomeComponent implements OnInit {
           NivelUnidadePai: nuPai.codigoUnidadePai,
           Nome: nuPai.nome
         };
-      }
+      }*/
     });
   }
 

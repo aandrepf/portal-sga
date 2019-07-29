@@ -31,7 +31,7 @@ export class DashboardTotemChartComponent implements OnInit, OnChanges {
       datalabels: {
         anchor: 'end',
         align: 'end',
-        offset: -30,
+        offset: -35,
         color: '#ffffff',
         backgroundColor: '#424242',
         formatter: function (value, context) {
@@ -40,7 +40,7 @@ export class DashboardTotemChartComponent implements OnInit, OnChanges {
         },
         font: {
           weight: 'normal',
-          size: 9,
+          size: 8,
         },
         display: function(context) {
           return context.dataset.data[context.dataIndex] >= 1; // or >= 1 or ...

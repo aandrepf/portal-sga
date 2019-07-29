@@ -224,7 +224,6 @@ export class AbrangeFilaUnicaComponent implements OnInit, OnDestroy {
             }
           }, err => console.error(err));
         });
-
     } else {
 
       this.unidades = new FetchUnidade();
@@ -245,5 +244,4 @@ export class AbrangeFilaUnicaComponent implements OnInit, OnDestroy {
         }, err => console.error(err));
     }
   }
-
 }

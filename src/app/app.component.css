@@ -38,9 +38,10 @@ span.user-info {
 .btn-brand-s-link {
   color: #424242;
   font-size: 12px;
-  *margin-right: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
   position: relative;
-  top: -2px;
+  top: 0px;
 }
 .btn-brand-s-link:hover {
   color: #424242;

@@ -7,23 +7,23 @@
       </div>
       <mat-tab-group (selectedTabChange)="selectedTab($event)" [selectedIndex]="selectedIndex">
         <!--PAGINAS DO TOTEM-->
-        <mat-tab label="Lista de Páginas">
+        <mat-tab label="Páginas">
           <app-interface-paginas (mandaId)="recebeId($event)"></app-interface-paginas>
         </mat-tab>
 
-        <mat-tab label="Titulo das Paginas" *ngIf="showTabs">
+        <mat-tab label="Cabeçalho da Página" *ngIf="showTabs">
           <app-interface-titulo-pagina [idPagina]="page" [indexTab]="selectedIndex"></app-interface-titulo-pagina>
         </mat-tab>
 
-        <mat-tab label="Lista de Links" *ngIf="showTabs">
+        <mat-tab label="Links da Página" *ngIf="showTabs">
           <app-interface-links [idPagina]="page" [indexTab]="selectedIndex" (mandaIdLink)="recebeIdLink($event)"></app-interface-links>
         </mat-tab>
 
-        <mat-tab label="Conteudo dos Links" *ngIf="showContentLinks">
+        <mat-tab label="Texto dos Links" *ngIf="showContentLinks">
           <app-interface-titulo-link [idPagina]="page" [idLink]="linkid" [indexTab]="selectedIndex"></app-interface-titulo-link>
         </mat-tab>
 
-        <mat-tab label="Lista de Botões" *ngIf="showTabs">
+        <mat-tab label="Botões da Página" *ngIf="showTabs">
           <app-interface-botoes [idPagina]="page" [indexTab]="selectedIndex"></app-interface-botoes>
         </mat-tab>
       </mat-tab-group>

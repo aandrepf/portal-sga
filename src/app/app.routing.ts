@@ -18,6 +18,7 @@ import { PerfilMenuComponent } from './components/perfil-menu/perfil-menu.compon
 const appRoutes: Routes = [
   /*
     { path: 'dash', component: DashboardHomeComponent },
+    { path: 'adm-interface', component: InterfaceComponent },
     { path: 'abrangencia-fu', component: AbrangeFilaUnicaComponent },
     { path: 'adm-fila-unica', component: FilaUnicaComponent },
     { path: 'preview-interface/:id', component: PreviewInterfaceComponent },
@@ -32,11 +33,12 @@ const appRoutes: Routes = [
     { path: 'adm-feriado', component: FeriadoComponent },
     { path: 'adm-incidentes', component: IncidentesComponent },
   */
-
-  { path: 'adm-rel-feriado', component: RelFeriadoComponent },
-  { path: 'adm-feriado', component: FeriadoComponent },
-  { path: '**', redirectTo: 'adm-feriado'},
-  { path: '', redirectTo: 'adm-feriado', pathMatch: 'full'},
+  { path: 'api-conexao', component: ApiConexaoComponent },
+  { path: 'dash', component: DashboardHomeComponent },
+  { path: 'adm-interface', component: InterfaceComponent },
+  { path: 'preview-interface/:id', component: PreviewInterfaceComponent },
+  { path: '**', redirectTo: 'dash'},
+  { path: '', redirectTo: 'dash', pathMatch: 'full'},
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);

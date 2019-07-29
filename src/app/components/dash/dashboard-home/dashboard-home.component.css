@@ -8,7 +8,7 @@
 .card .card-header {
   font-size: 8.5pt !important;
   border: 0 !important;
-  margin: 0 0 20px;
+  margin: 0 0 0;
 }
 .btn-group-sm>.btn, .btn-sm {
   padding: 5px 10px;
@@ -16,7 +16,7 @@
   line-height: 1.5;
   border-radius: 3px;
   float: right;
-  color: #424242;
+  color: #424242!important;
 }
 .no-graf-info {
   text-align: center;

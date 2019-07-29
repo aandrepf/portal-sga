@@ -82,5 +82,4 @@ export class FilaUnicaComponent implements OnInit {
       break;
     }
   }
-
 }

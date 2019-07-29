@@ -42,7 +42,7 @@ export class InterfaceDialogLinksComponent implements OnInit, OnDestroy {
       id: [this.data.operation === ENOperation.create ? 0 : ''],
       descricao: ['', Validators.required],
       destino: ['', Validators.min(1)],
-      fonte: ['', Validators.min(10)],
+      fonte: ['', Validators.min(14)],
       prioritario: [this.data.operation === ENOperation.create ? false : '', Validators.required]
     });
 

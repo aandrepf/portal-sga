@@ -8,10 +8,10 @@ import { AuthService } from 'src/app/services/auth.service';
 import { AlertDialogComponent } from 'src/app/utils/alert.dialog.component';
 
 export class ConnectionString {
-  ServerName: string;
-  Database: string;
-  UserId: string;
-  Password: string;
+  serverName: string;
+  database: string;
+  userId: string;
+  password: string;
 }
 
 @Component({
@@ -44,11 +44,12 @@ export class ApiConexaoComponent implements OnInit, OnDestroy {
   ngOnInit() {
     // this.spinner.show();
     setTimeout(() => {
-      this.load = true;
       const perfilUsuarioLogado = JSON.parse(localStorage.getItem('usuario')).perfilUsuario;
       console.log('Usuario ID ===>', perfilUsuarioLogado);
       if (perfilUsuarioLogado !== 'ADMIN') {
         this.alertLogin('Mensagem do sistema', 'Usuário sem permissão de acesso.');
+      } else {
+        this.load = true;
       }
       // this.spinner.hide();
     }, 100);
@@ -80,17 +81,18 @@ export class ApiConexaoComponent implements OnInit, OnDestroy {
 
   onSubmit() {
     this.conexao = new ConnectionString();
-    this.conexao.ServerName = this.conexaoForm.value.ServerName;
-    this.conexao.Database = this.conexaoForm.value.Database;
-    this.conexao.UserId = this.conexaoForm.value.UserId;
-    this.conexao.Password = this.conexaoForm.value.Password;
+    this.conexao.serverName = this.conexaoForm.value.ServerName;
+    this.conexao.database = this.conexaoForm.value.Database;
+    this.conexao.userId = this.conexaoForm.value.UserId;
+    this.conexao.password = this.conexaoForm.value.Password;
 
     this._subsConexao = this._conexao.createConnection(this.conexao).subscribe(
       (data: string) => {
+        console.log('DATA RET.:', data);
         if (data.length === 0) {
           this.snackBar.open('O servidor não conseguiu encriptar a string de conexão', '', { duration: 3000 });
         } else {
-          this.snackBar.open('String configurada', data, { duration: 3000 });
+          this.snackBar.open('String configurada', data.substring(0, 7), { duration: 3000 });
         }
         this.resetaForm();
       },

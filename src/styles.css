@@ -1,7 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @font-face {font-family: FontAwesome;src: url("./assets/fonts/fonts/fontawesome-webfont.ttf")}
-/* You can add global styles to this file, and also import other style files */
 @font-face {font-family: ItauText_Lt; src: url("./assets/fonts/ItauText_Lt.ttf") format('truetype');}
 @font-face {font-family: itaufonts_master; src: url("./assets/fonts/itaufonts_master_24px_v1.ttf") format('truetype');}
 html, body {
@@ -9,6 +8,36 @@ html, body {
   background-color: #ffffff;
   *text-align: center;
   *overflow:hidden;
+}
+.page-footer {
+  color: #ffffff;
+  display: block;
+  float: left;
+  width: 100%;
+}
+.presentation {
+  font-family: gilroyB;
+  font-size: 18px;
+  letter-spacing: 0.2px;
+}
+.op-left {
+  width: 46%;
+  float: left;
+}
+.op-right {
+  width: 48%;
+  float: left;
+  margin-left: 25px;
+}
+.op-title {
+  font-family: gilroyB;
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+.op-description {
+  font-family: gilroyR;
+  font-size: 17px;
 }
 .mat-dialog-container {
   width: 100%!important;
@@ -38,6 +67,20 @@ html, body {
 .has-no-event {
   pointer-events: none!important;
   touch-action: none;
+}
+.card-deck {
+  flex-flow: row wrap;
+  margin-right: 20px!important;
+  margin-left: 20px!important;
+}
+.card-deck .card {
+  display: flex;
+  flex: 1 0 0%;
+  flex-direction: column;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  border: 0;
 }
 /*.cell-totals {
 margin: 5px;

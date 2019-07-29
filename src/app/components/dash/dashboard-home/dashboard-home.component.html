@@ -3,13 +3,13 @@
   <h3>Desculpe! Não possuimos registros de dados até o momento.</h3>
 </div>
 <ng-template #grafico>
-  <div class="fixed-top animated zoomIn" *ngIf="load">
-    <div class="legend-adjust float-right">
+  <div class="animated zoomIn" *ngIf="load">
+    <div class="legend-adjust">
       <app-dashboard-legend (eventFilter)="backToNivelUnidadePai($event)" [dashboard]="dashboard" [nuControl]="nuControl"></app-dashboard-legend>
     </div>
   </div>
   <div class="card-deck" style="margin-top: 3rem!important" *ngIf="load">
-    <!-- GRAFICO-->
+    <!-- GRAFICO
     <div class="card text-white text-center col-lg-12 col-sm-12">
       <div class="card-header">
         EVOLUTIVO QCE, QCA, QSC
@@ -17,7 +17,7 @@
       <div class="card-body">
         <app-dashboard-evolutivo [@zoomOutIn]="cardAnimateState" [dashboard]="dashboard"></app-dashboard-evolutivo>
       </div>
-    </div>
+    </div>-->
 
     <!-- GRAFICO DE PIZZA -->
     <div class="card text-white text-center col-lg-6 col-sm-12">
@@ -32,7 +32,7 @@
     <!-- GRAFICO HORIZONTAL -->
     <div class="card text-white text-center col-lg-6 col-sm-12">
       <div class="card-header">
-        ATENDIMENTO
+        QUANTIDADE DE ATENDIMENTO
       </div>
       <div class="card-body">
         <app-dashboard-qca-chart [@zoomOutIn]="cardAnimateState" [dashboard]="dashboard"></app-dashboard-qca-chart>

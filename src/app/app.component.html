@@ -3,14 +3,17 @@
 </ngx-spinner>
 <div class="row align-itens-start" *ngIf="usuario.isUsuarioLogado">
   <div class="col-sm-12 col-md-12 brand-col">
-    <button class="menu-button" mat-button [matMenuTriggerFor]="menu" matTooltip="MENU">
-        <i class="fa fa-bars" aria-hidden="true"></i>
-    </button>
-    <img src="https://341sga.azurewebsites.net/ui/img/marca.jpg" width="200" alt="SGA" title="SGA"/>
+      <!--button class="menu-button" mat-button [matMenuTriggerFor]="menu" matTooltip="MENU">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+      </button-->
+      <button class="menu-button" mat-button [matMenuTriggerFor]="menu" matTooltip="MENU">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+      </button>
+    <img src="./assets/images/logo.svg" width="200" alt="Bradesco SGA" title="Bradesco SGA"/>
     <mat-menu #menu="matMenu">
       <button mat-menu-item [routerLink]="['/dash']" [queryParams]="{ ac: ac, id: id }">Dashboard</button>
       <button mat-menu-item [routerLink]="['/adm-interface']" [queryParams]="{ ac: ac, id: id }">Interface Emissor</button>
-      <button mat-menu-item [matMenuTriggerFor]="feriado">Feriado</button>
+      <!--button mat-menu-item [matMenuTriggerFor]="feriado">Feriado</button-->
     </mat-menu>
 
     <mat-menu #feriado="matMenu">
@@ -20,8 +23,8 @@
 
     <span class="user-info">
       <small *ngIf="caminho !== '/dash' || caminho !== '/portal'"><i class="fa fa-user" aria-hidden="true"></i> {{ usuario.nome }}</small>
-      <button mat-icon-button matTooltip="SAIR" class="btn btn-link btn-brand-s-link text-dark" (click)="logout()">
-        <i class="fa fa-times" aria-hidden="true"></i>
+      <button mat-icon-button class="btn btn-link btn-brand-s-link text-dark" (click)="logout()">
+        <!--i class="fa fa-times" aria-hidden="true"></i-->VOLTAR
       </button>
     </span>
   </div>

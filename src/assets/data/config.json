@@ -1,10 +1,9 @@
 [
   {
-    "urlServer": "http://servidordb12/sga301/SGA-Services-Consulta/SgfConsulta.svc/",
-    "urlAzureServer": "https://341hubsgacorp.azurewebsites.net/",
-    "urlApplication": "https://341sga.azurewebsites.net/Monitoramentos/Geral.aspx",
-    "urlAuthentication": "https://341sga.azurewebsites.net/Autenticacao/Login.aspx",
-    "urlHub": "http://localhost/HubSGA/",
-    "urlDownloadXLSX": "http://localhost:8080"
+    "urlAzureServer": "http://servidordb08/SGA40/HubSGA/",
+    "urlApplication": "http://servidordb08/SGA40/SGA/Monitoramentos/Geral.aspx",
+    "urlAuthentication": "http://servidordb08/SGA40/SGA/Autenticacao/Login.aspx",
+    "urlHub": "http://servidordb08/SGA40/HubSGA/",
+    "urlDownloadXLSX": "http://servidordb08:8080"
   }
 ]

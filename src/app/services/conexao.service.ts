@@ -21,8 +21,6 @@ export class ConexaoService {
     const url = this._interface.appConfig.urlHub + Global.API_CONNECTION;
     const body = JSON.stringify(conexao);
 
-    console.log('data request post', url, body);
-
     return this._http.post(url, body, httpOptions);
   }
 }

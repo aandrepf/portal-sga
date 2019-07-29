@@ -20,3 +20,16 @@
 .jvectormap-legend-tick-text {
   color: #424242;
 }
+.card .card-header {
+  color: #333;
+  background: transparent;
+}
+
+.card.text-white.text-center.col-lg-12.col-sm-12 {
+  border: 0!important;
+  flex: inherit!important;
+}
+.small, small {
+  color: #333;
+}
+
